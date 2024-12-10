@@ -10,28 +10,31 @@ importers:
     dependencies:
       '@eggjs/tegg':
         specifier: ^3.5.2
-        version: 3.51.2(leoric@2.13.2)
+        version: 3.51.2(leoric@2.13.2(mysql@2.18.1))
       '@eggjs/tegg-aop-plugin':
         specifier: ^3.5.2
-        version: 3.51.2(leoric@2.13.2)
+        version: 3.51.2(leoric@2.13.2(mysql@2.18.1))
       '@eggjs/tegg-config':
         specifier: ^3.2.3
         version: 3.51.2
       '@eggjs/tegg-controller-plugin':
         specifier: ^3.5.2
-        version: 3.51.2(leoric@2.13.2)
+        version: 3.51.2(leoric@2.13.2(mysql@2.18.1))
       '@eggjs/tegg-eventbus-plugin':
         specifier: ^3.5.2
-        version: 3.51.2(leoric@2.13.2)
+        version: 3.51.2(leoric@2.13.2(mysql@2.18.1))
       '@eggjs/tegg-plugin':
         specifier: ^3.5.2
-        version: 3.51.2(leoric@2.13.2)
+        version: 3.51.2(leoric@2.13.2(mysql@2.18.1))
       '@eggjs/tegg-schedule-plugin':
         specifier: ^3.5.2
-        version: 3.51.2(leoric@2.13.2)
+        version: 3.51.2(leoric@2.13.2(mysql@2.18.1))
       egg:
         specifier: ^3.15.0
         version: 3.29.0
+      egg-mysql:
+        specifier: ^4.0.0
+        version: 4.0.0
       egg-scripts:
         specifier: ^2.17.0
         version: 2.17.0
@@ -635,6 +638,10 @@ packages:
   ajv@8.17.1:
     resolution: {integrity: sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g==}
 
+  ali-rds@5.1.2:
+    resolution: {integrity: sha512-YI0jWDiDzmhbZ9i5MPWky8Fc6Eg+s6vTt7BdomrGVtE1dV+Ikzb5PjdxfvGyTnHD89TdjTcV6KriM1+0h7Gp1g==}
+    engines: {node: '>= 14.17.0'}
+
   ansi-colors@4.1.3:
     resolution: {integrity: sha512-/6w/C21Pm1A7aZitlI5Ni/2J6FFQN8i1Cvz3kHABAAbw93v/NlvKdVOqz7CCWz/3iv/JplRSEEZ83XION15ovw==}
     engines: {node: '>=6'}
@@ -772,6 +779,9 @@ packages:
 
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
+
+  bignumber.js@9.0.0:
+    resolution: {integrity: sha512-t/OYhhJ2SD+YGBQcjY8GzzDHEk9f3nerxjtfa6tlMXfe7frs/WozhvCNoGvpM0P3bNf3Gq5ZRMlGr5f3r4/N8A==}
 
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
@@ -1271,6 +1281,10 @@ packages:
   egg-multipart@3.4.0:
     resolution: {integrity: sha512-tLM+ijjH0uu2LzysME29Sn9f+aYOSZVtDs+5rON0tJl5/Oh9DyCOZHOerRubvilkDMc2xMY5+lyjUMdlVbPHzg==}
     engines: {node: '>= 14.17.0'}
+
+  egg-mysql@4.0.0:
+    resolution: {integrity: sha512-PvGAyd2sYPswbZql5u5tSWz2T+RU7kKcMQ21Z4v8yoyXkBJ/gLCzHjwm/J4pUgEuELiXrr2IPUsp/rC0j3KxNw==}
+    engines: {node: '>=16.0.0'}
 
   egg-onerror@2.4.0:
     resolution: {integrity: sha512-btmUsP1m6H9awd1IaAlvlzqN+uIbUKzaxJ8ArZI71r5FQ9LShZGv2pOT5fhL9mSnGkrvHUsjb9I5KoX2AY63bA==}
@@ -2404,6 +2418,10 @@ packages:
   mute-stream@0.0.8:
     resolution: {integrity: sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==}
 
+  mysql@2.18.1:
+    resolution: {integrity: sha512-Bca+gk2YWmqp2Uf6k5NFEurwY/0td0cpebAucFpY/3jhrwrVGuxU2uQFCHjU19SJfje0yQvi+rVWdq78hR5lig==}
+    engines: {node: '>= 0.6'}
+
   mz-modules@2.1.0:
     resolution: {integrity: sha512-sjk8lcRW3vrVYnZ+W+67L/2rL+jbO5K/N6PFGIcLWTiYytNr22Ah9FDXFs+AQntTM1boZcoHi5qS+CV1seuPog==}
     engines: {node: '>=6.0.0'}
@@ -2692,6 +2710,9 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
+  readable-stream@2.3.7:
+    resolution: {integrity: sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==}
+
   readable-stream@2.3.8:
     resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==}
 
@@ -2926,6 +2947,10 @@ packages:
 
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
+
+  sqlstring@2.3.1:
+    resolution: {integrity: sha512-ooAzh/7dxIG5+uDik1z/Rd1vli0+38izZhGzSa34FwR7IbelPWCCKSNIl8jlL/F7ERvy8CB2jNeM1E9i9mXMAQ==}
+    engines: {node: '>= 0.6'}
 
   sqlstring@2.3.3:
     resolution: {integrity: sha512-qC9iz2FlN7DQl3+wjwn3802RTyjCx7sDvfQEXchwa6CWOx07/WVfh91gBmQ9fahw8snwGEWU3xGzOt4tFyHLxg==}
@@ -3673,11 +3698,11 @@ snapshots:
       '@eggjs/tegg-common-util': 3.51.2
       reflect-metadata: 0.1.14
 
-  '@eggjs/tegg-aop-plugin@3.51.2(leoric@2.13.2)':
+  '@eggjs/tegg-aop-plugin@3.51.2(leoric@2.13.2(mysql@2.18.1))':
     dependencies:
       '@eggjs/aop-decorator': 3.51.2
       '@eggjs/egg-module-common': 3.51.2
-      '@eggjs/tegg': 3.51.2(leoric@2.13.2)
+      '@eggjs/tegg': 3.51.2(leoric@2.13.2(mysql@2.18.1))
       '@eggjs/tegg-aop-runtime': 3.51.2
       '@eggjs/tegg-metadata': 3.51.2
     transitivePeerDependencies:
@@ -3712,11 +3737,11 @@ snapshots:
     dependencies:
       '@eggjs/tegg-common-util': 3.51.2
 
-  '@eggjs/tegg-controller-plugin@3.51.2(leoric@2.13.2)':
+  '@eggjs/tegg-controller-plugin@3.51.2(leoric@2.13.2(mysql@2.18.1))':
     dependencies:
       '@eggjs/egg-module-common': 3.51.2
       '@eggjs/router': 2.0.1
-      '@eggjs/tegg': 3.51.2(leoric@2.13.2)
+      '@eggjs/tegg': 3.51.2(leoric@2.13.2(mysql@2.18.1))
       '@eggjs/tegg-common-util': 3.51.2
       '@eggjs/tegg-loader': 3.51.2
       '@eggjs/tegg-metadata': 3.51.2
@@ -3745,10 +3770,10 @@ snapshots:
       '@eggjs/core-decorator': 3.51.2
       '@eggjs/tegg-types': 3.51.2
 
-  '@eggjs/tegg-eventbus-plugin@3.51.2(leoric@2.13.2)':
+  '@eggjs/tegg-eventbus-plugin@3.51.2(leoric@2.13.2(mysql@2.18.1))':
     dependencies:
       '@eggjs/egg-module-common': 3.51.2
-      '@eggjs/tegg': 3.51.2(leoric@2.13.2)
+      '@eggjs/tegg': 3.51.2(leoric@2.13.2(mysql@2.18.1))
       '@eggjs/tegg-eventbus-runtime': 3.51.2
       '@eggjs/tegg-metadata': 3.51.2
       '@eggjs/tegg-runtime': 3.51.2
@@ -3786,20 +3811,20 @@ snapshots:
       '@eggjs/tegg-types': 3.51.2
       egg-errors: 2.3.2
 
-  '@eggjs/tegg-orm-decorator@3.51.2(leoric@2.13.2)':
+  '@eggjs/tegg-orm-decorator@3.51.2(leoric@2.13.2(mysql@2.18.1))':
     dependencies:
       '@eggjs/core-decorator': 3.51.2
       '@eggjs/tegg-common-util': 3.51.2
       '@eggjs/tegg-metadata': 3.51.2
       '@eggjs/tegg-types': 3.51.2
-      leoric: 2.13.2
+      leoric: 2.13.2(mysql@2.18.1)
       lodash: 4.17.21
       pluralize: 8.0.0
 
-  '@eggjs/tegg-plugin@3.51.2(leoric@2.13.2)':
+  '@eggjs/tegg-plugin@3.51.2(leoric@2.13.2(mysql@2.18.1))':
     dependencies:
       '@eggjs/egg-module-common': 3.51.2
-      '@eggjs/tegg': 3.51.2(leoric@2.13.2)
+      '@eggjs/tegg': 3.51.2(leoric@2.13.2(mysql@2.18.1))
       '@eggjs/tegg-background-task': 3.51.2
       '@eggjs/tegg-common-util': 3.51.2
       '@eggjs/tegg-dynamic-inject-runtime': 3.51.2
@@ -3827,10 +3852,10 @@ snapshots:
       '@eggjs/tegg-types': 3.51.2
       cron-parser: 2.18.0
 
-  '@eggjs/tegg-schedule-plugin@3.51.2(leoric@2.13.2)':
+  '@eggjs/tegg-schedule-plugin@3.51.2(leoric@2.13.2(mysql@2.18.1))':
     dependencies:
       '@eggjs/egg-module-common': 3.51.2
-      '@eggjs/tegg': 3.51.2(leoric@2.13.2)
+      '@eggjs/tegg': 3.51.2(leoric@2.13.2(mysql@2.18.1))
       '@eggjs/tegg-common-util': 3.51.2
       '@eggjs/tegg-lifecycle': 3.51.2
       '@eggjs/tegg-loader': 3.51.2
@@ -3849,7 +3874,7 @@ snapshots:
 
   '@eggjs/tegg-types@3.51.2': {}
 
-  '@eggjs/tegg@3.51.2(leoric@2.13.2)':
+  '@eggjs/tegg@3.51.2(leoric@2.13.2(mysql@2.18.1))':
     dependencies:
       '@eggjs/ajv-decorator': 3.51.2
       '@eggjs/aop-decorator': 3.51.2
@@ -3864,7 +3889,7 @@ snapshots:
       '@eggjs/tegg-lifecycle': 3.51.2
       '@eggjs/tegg-loader': 3.51.2
       '@eggjs/tegg-metadata': 3.51.2
-      '@eggjs/tegg-orm-decorator': 3.51.2(leoric@2.13.2)
+      '@eggjs/tegg-orm-decorator': 3.51.2(leoric@2.13.2(mysql@2.18.1))
       '@eggjs/tegg-runtime': 3.51.2
       '@eggjs/tegg-schedule-decorator': 3.51.2
       '@eggjs/tegg-transaction-decorator': 3.51.2
@@ -4262,6 +4287,10 @@ snapshots:
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
+  ali-rds@5.1.2:
+    dependencies:
+      mysql: 2.18.1
+
   ansi-colors@4.1.3: {}
 
   ansi-escapes@4.3.2:
@@ -4399,6 +4428,8 @@ snapshots:
   balanced-match@1.0.2: {}
 
   base64-js@1.5.1: {}
+
+  bignumber.js@9.0.0: {}
 
   binary-extensions@2.3.0: {}
 
@@ -5032,6 +5063,10 @@ snapshots:
       dayjs: 1.11.13
       egg-path-matching: 1.1.0
       humanize-bytes: 1.0.1
+
+  egg-mysql@4.0.0:
+    dependencies:
+      ali-rds: 5.1.2
 
   egg-onerror@2.4.0:
     dependencies:
@@ -6293,7 +6328,7 @@ snapshots:
     dependencies:
       language-subtag-registry: 0.3.23
 
-  leoric@2.13.2:
+  leoric@2.13.2(mysql@2.18.1):
     dependencies:
       dayjs: 1.11.13
       debug: 3.2.7
@@ -6304,6 +6339,8 @@ snapshots:
       sqlstring: 2.3.3
       tslib: 2.8.1
       validator: 13.12.0
+    optionalDependencies:
+      mysql: 2.18.1
     transitivePeerDependencies:
       - supports-color
 
@@ -6502,6 +6539,13 @@ snapshots:
   mustache@2.3.2: {}
 
   mute-stream@0.0.8: {}
+
+  mysql@2.18.1:
+    dependencies:
+      bignumber.js: 9.0.0
+      readable-stream: 2.3.7
+      safe-buffer: 5.1.2
+      sqlstring: 2.3.1
 
   mz-modules@2.1.0:
     dependencies:
@@ -6775,6 +6819,16 @@ snapshots:
 
   react-is@16.13.1: {}
 
+  readable-stream@2.3.7:
+    dependencies:
+      core-util-is: 1.0.3
+      inherits: 2.0.4
+      isarray: 1.0.0
+      process-nextick-args: 2.0.1
+      safe-buffer: 5.1.2
+      string_decoder: 1.1.1
+      util-deprecate: 1.0.2
+
   readable-stream@2.3.8:
     dependencies:
       core-util-is: 1.0.3
@@ -7026,6 +7080,8 @@ snapshots:
       through: 2.3.8
 
   sprintf-js@1.0.3: {}
+
+  sqlstring@2.3.1: {}
 
   sqlstring@2.3.3: {}
 

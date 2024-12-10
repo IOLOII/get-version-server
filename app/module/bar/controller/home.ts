@@ -4,6 +4,7 @@ import { Inject, HTTPController, HTTPMethod, HTTPMethodEnum } from '@eggjs/tegg'
 @HTTPController({
   path: '/',
 })
+// export class HomeController extends Service {
 export class HomeController {
   @Inject()
   logger: EggLogger;

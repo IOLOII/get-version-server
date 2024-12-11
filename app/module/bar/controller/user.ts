@@ -1,9 +1,10 @@
-import { Inject, HTTPController, HTTPMethod, HTTPMethodEnum, HTTPQuery } from '@eggjs/tegg';
+import { Inject, HTTPController, HTTPMethod, HTTPMethodEnum, HTTPQuery, ContextProto } from '@eggjs/tegg';
 import { HelloService } from '@/module/foo';
 
 @HTTPController({
   path: '/bar',
 })
+@ContextProto()
 export class UserController {
   @Inject()
   helloService: HelloService;

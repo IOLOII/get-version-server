@@ -31,3 +31,8 @@ npm start
 
 - Node.js >= 16.x
 - Typescript >= 4.x
+
+
+# 开发文档
+
+https://github.com/eggjs/tegg/tree/master/plugin/controller

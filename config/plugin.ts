@@ -29,9 +29,9 @@ const plugin: EggPlugin = {
     enable: true,
     package: 'egg-tracer',
   },
-  mysql: {
+  teggDal: {
+    package: '@eggjs/tegg-dal-plugin',
     enable: true,
-    package: 'egg-mysql',
   },
 };
 

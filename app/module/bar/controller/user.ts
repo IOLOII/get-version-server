@@ -1,4 +1,4 @@
-import { Inject, HTTPController, HTTPMethod, HTTPMethodEnum, HTTPQuery, ContextProto } from '@eggjs/tegg';
+import { Inject, HTTPController, HTTPMethod, HTTPMethodEnum, HTTPQuery, ContextProto, EggContext, Context } from '@eggjs/tegg';
 import { HelloService } from '@/module/foo';
 
 @HTTPController({
@@ -13,7 +13,8 @@ export class UserController {
     method: HTTPMethodEnum.GET,
     path: 'user',
   })
-  async user(@HTTPQuery({ name: 'userId' }) userId: string) {
+  async user(@Context() ctx: EggContext, @HTTPQuery({ name: 'userId' }) userId: string) {
+    console.log('ctx', ctx);
     return await this.helloService.hello(userId);
   }
 }

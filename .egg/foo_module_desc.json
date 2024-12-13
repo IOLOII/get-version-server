@@ -1,1 +1,1 @@
-{"name": "foo","unitPath": "/Users/ioloii/Desktop/repos/node-update/app/module/foo","clazzList": [{"name": "HelloService","filePath": "service/HelloService.ts"}],"multiInstanceClazzList": [],"protos": []}
+{"name": "foo","unitPath": "/Users/ioloii/Desktop/repos/node-update/app/module/foo","clazzList": [{"name": "HelloService","filePath": "service/HelloService.ts"}],"multiInstanceClazzList": [{"name": "DataSourceDelegate","filePath": "../../../node_modules/@eggjs/tegg-dal-plugin/lib/DataSource.js"}],"protos": []}

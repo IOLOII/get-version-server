@@ -9,7 +9,6 @@ import {
   Post,
   Put,
   Query,
-  Response,
 } from '@nestjs/common'
 import { Cat, DemoService } from './demo.service'
 interface ListAllEntities {
@@ -26,7 +25,7 @@ type UpdateCatDto = CreateCatDto
 @Controller('demo')
 export class DemoController {
   // private demoService: DemoService
-  constructor(private demoService: DemoService) { }
+  constructor(private demoService: DemoService) {}
 
   @Get()
   default(): string {

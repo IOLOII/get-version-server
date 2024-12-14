@@ -33,6 +33,8 @@
 nest g controller cats # 创建控制器
 
 nest g service cats # 创建服务
+
+nest g module demo #
 ```
 
 ## 请求中常用修饰器

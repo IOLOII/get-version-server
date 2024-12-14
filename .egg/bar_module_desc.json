@@ -1,1 +1,0 @@
-{"name": "bar","unitPath": "/Users/ioloii/Desktop/repos/node-update/app/module/bar","clazzList": [{"name": "HomeController","filePath": "controller/home.ts"},{"name": "UserController","filePath": "controller/user.ts"}],"multiInstanceClazzList": [{"name": "DataSourceDelegate","filePath": "../../../node_modules/@eggjs/tegg-dal-plugin/lib/DataSource.js"}],"protos": []}

@@ -1,1 +1,0 @@
-{"name": "teggDal","unitPath": "/Users/ioloii/Desktop/repos/node-update/node_modules/@eggjs/tegg-dal-plugin","optional": false,"clazzList": [{"name": "TransactionalAOP","filePath": "lib/TransactionalAOP.js"}],"multiInstanceClazzList": [{"name": "DataSourceDelegate","filePath": "lib/DataSource.js"}],"protos": []}

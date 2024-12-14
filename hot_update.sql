@@ -5,13 +5,13 @@
  Source Server Type    : MySQL
  Source Server Version : 80036 (8.0.36)
  Source Host           : rm-bp1t9x38ky10004pm6o.rwlb.rds.aliyuncs.com:3306
- Source Schema         : hot-update
+ Source Schema         : hot_update
 
  Target Server Type    : MySQL
  Target Server Version : 80036 (8.0.36)
  File Encoding         : 65001
 
- Date: 10/12/2024 17:19:48
+ Date: 15/12/2024 05:31:59
 */
 
 SET NAMES utf8mb4;
@@ -31,23 +31,23 @@ CREATE TABLE `public_key` (
 -- Records of public_key
 -- ----------------------------
 BEGIN;
+INSERT INTO `public_key` (`key`, `username`) VALUES ('hashkey', 'IOLOII');
 COMMIT;
 
 -- ----------------------------
--- Table structure for user
+-- Table structure for users
 -- ----------------------------
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user` (
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  PRIMARY KEY (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+  `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  PRIMARY KEY (`username`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
--- Records of user
+-- Records of users
 -- ----------------------------
 BEGIN;
-INSERT INTO `user` (`username`, `password`) VALUES ('IOLOII', '123456');
 COMMIT;
 
 -- ----------------------------
@@ -65,7 +65,7 @@ CREATE TABLE `version` (
 -- Records of version
 -- ----------------------------
 BEGIN;
-INSERT INTO `version` (`appname`, `version`, `username`) VALUES ('demo', '1.0.0', 'IOLOII');
+INSERT INTO `version` (`appname`, `version`, `username`) VALUES ('demo', '1.0.2', 'IOLOII');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;

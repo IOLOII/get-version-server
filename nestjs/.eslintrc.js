@@ -27,5 +27,14 @@ module.exports = {
     semi: 'off',
     // 强制使用单引号
     quotes: ['error', 'single'],
+    // 设置为使用的下划线变量忽略
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
   },
 }

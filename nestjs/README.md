@@ -27,11 +27,29 @@
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 
-## 创建路由
+## 创建脚本
 
 ```bash
-nest g controller cats
+nest g controller cats # 创建控制器
 
+nest g service cats # 创建服务
+```
+
+## 请求中常用修饰器
+
+https://docs.nestjs.cn/8/controllers?id=request
+
+```
+@Request()，@Req()	req
+@Response()，@Res()*	res
+@Next()	next
+@Session()	req.session
+@Param(key?: string)	req.params/req.params[key]
+@Body(key?: string)	req.body/req.body[key]
+@Query(key?: string)	req.query/req.query[key]
+@Headers(name?: string)	req.headers/req.headers[name]
+@Ip()	req.ip
+@HostParam()	req.hosts
 ```
 
 ## Project setup

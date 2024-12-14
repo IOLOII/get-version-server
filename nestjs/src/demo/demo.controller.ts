@@ -8,7 +8,7 @@ import {
   Param,
   Post,
   Put,
-  Query,
+  Query
 } from '@nestjs/common'
 import { Cat, DemoService } from './demo.service'
 interface ListAllEntities {

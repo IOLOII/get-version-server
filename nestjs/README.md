@@ -36,6 +36,11 @@ nest g service cats # 创建服务
 
 nest g module demo #
 ```
+## 数据库 sequelize
+
+https://docs.nestjs.com/techniques/database#sequelize-integration
+
+
 
 ## 请求中常用修饰器
 

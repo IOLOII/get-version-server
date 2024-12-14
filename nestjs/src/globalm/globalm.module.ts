@@ -5,6 +5,6 @@ import { GlobalmController } from './globalm.controller'
 @Global()
 @Module({
   providers: [GlobalmService],
-  controllers: [GlobalmController],
+  controllers: [GlobalmController]
 })
 export class GlobalmModule {}

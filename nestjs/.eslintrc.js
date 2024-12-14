@@ -36,5 +36,6 @@ module.exports = {
         "caughtErrorsIgnorePattern": "^_"
       }
     ],
+    'comma-dangle': ['error', 'never'] // 末尾不要逗号
   },
 }

@@ -6,6 +6,6 @@ import { DemoModule } from 'src/demo/demo.module'
 @Module({
   controllers: [AnotherController],
   providers: [AnotherService],
-  imports: [DemoModule],
+  imports: [DemoModule]
 })
 export class AnotherModule {}

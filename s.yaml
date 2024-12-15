@@ -4,34 +4,34 @@
 #   有问题快来钉钉群问一下吧：33947367
 # ------------------------------------
 edition: 3.0.0
-name: hello-world-app
+name: get-version-server
 access: "default"
 
 vars:
   region: "cn-hangzhou"
 
 resources:
-  hello_world:
+  get_version:
     component: fc3
     actions:
       pre-${regex('deploy|local')}:
         - component: fc3 build --dockerfile ./code/Dockerfile
     props:
       region: ${vars.region}
-      functionName: "start-nodejs-0vcg"
+      functionName: "get-version"
       runtime: "custom-container"
-      description: 'hello world by serverless devs'
+      description: 'publish version for other app'
       timeout: 30
       memorySize: 512
       cpu: 0.5
       diskSize: 512
       code: ./code
       customContainerConfig:
-        image: "registry.${vars.region}.aliyuncs.com/ioloii/docker-comtainer2:v3"
+        image: "registry.${vars.region}.aliyuncs.com/ioloii/get-version:v1"
       triggers:
         - triggerName: httpTrigger # 触发器名称
           triggerType: http # 触发器类型
-          description: 'xxxx'
+          description: 'api-server'
           qualifier: LATEST # 触发服务的版本
           triggerConfig:
             authType: anonymous # 鉴权类型，可选值：anonymous、function

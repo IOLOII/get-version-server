@@ -54,10 +54,10 @@ export class VersionController {
   async updateVersion(
     @Param('appname') appname: string,
     @Body('version') version: string,
-    @Body('key') key: string
+    // @Body('key') key: string
   ) {
     try {
-      await this.publicKeyService.verifyKey(key)
+      // await this.publicKeyService.verifyKey(key)
       await this.versionService.updateVersion({
         version,
         appname
@@ -65,7 +65,8 @@ export class VersionController {
 
       return {
         message: 'update success, current Version: ' + version,
-        version
+        version,
+        appname
       }
     } catch (_error) {
       throw new HttpException('BadRequest', HttpStatus.BAD_REQUEST)

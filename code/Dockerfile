@@ -1,4 +1,4 @@
-FROM node:14-buster
+FROM node:18
 
 # Create app directory
 WORKDIR /usr/src/
@@ -8,6 +8,8 @@ WORKDIR /usr/src/
 # where available (npm@5+)
 COPY package*.json ./
 
+RUN npm config set registry https://registry.npmmirror.com
+RUN npm i -D @nestjs/cli
 RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
@@ -16,4 +18,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 9000
-ENTRYPOINT [ "node", "server.js" ]
+ENTRYPOINT [ "npm", "start" ]

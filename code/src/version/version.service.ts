@@ -13,8 +13,8 @@ export class VersionService {
       { version },
       {
         where: {
-          appname,
-        },
+          appname
+        }
       }
     )
   }
@@ -22,16 +22,16 @@ export class VersionService {
     return this.versionModel.create(
       { version, appname, username },
       {
-        fields: ['version', 'appname', 'username'],
+        fields: ['version', 'appname', 'username']
       }
     )
   }
   async getVersion(appname: string): Promise<Version> {
     return this.versionModel.findOne({
       where: {
-        appname,
+        appname
       },
-      attributes: ['version', 'appname'],
+      attributes: ['version', 'appname']
     })
   }
 }

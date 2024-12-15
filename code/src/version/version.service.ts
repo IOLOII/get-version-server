@@ -8,22 +8,30 @@ export class VersionService {
     @InjectModel(Version)
     private readonly versionModel: typeof Version
   ) {}
-  async setVersion({ appname, version }: Version) {
+  async updateVersion({ appname, version }: Version) {
     return this.versionModel.update(
       { version },
       {
         where: {
-          appname
-        }
+          appname,
+        },
+      }
+    )
+  }
+  async createVersion({ appname, version, username }: Version) {
+    return this.versionModel.create(
+      { version, appname, username },
+      {
+        fields: ['version', 'appname', 'username'],
       }
     )
   }
   async getVersion(appname: string): Promise<Version> {
     return this.versionModel.findOne({
       where: {
-        appname
+        appname,
       },
-      attributes: ['version', 'appname']
+      attributes: ['version', 'appname'],
     })
   }
 }

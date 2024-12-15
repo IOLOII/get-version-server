@@ -1,12 +1,4 @@
-import {
-  Body,
-  Controller,
-  Get,
-  HttpException,
-  HttpStatus,
-  Param,
-  Post
-} from '@nestjs/common'
+import { Body, Controller, Get, HttpException, HttpStatus, Param, Post, Put } from '@nestjs/common'
 import { VersionService } from './version.service'
 import { Version } from './version.model'
 import { PublicKeyService } from 'src/public_key/public_key.service'
@@ -24,23 +16,44 @@ export class VersionController {
     const info: Version = await this.versionService.getVersion(appname)
     return info
   }
-  @Post(':appname')
-  // async setVersion(@Body() body: Version, @Body('key') key: string) {
-  async setVersion(
+
+  @Post('')
+  async createVersion(
     @Body('appname') appname: string,
     @Body('version') version: string,
-    @Body('key') key: string
+    @Body('username') username: string
   ) {
     try {
-      await this.publicKeyService.verifyKey(key)
-      await this.versionService.setVersion({
+      await this.versionService.createVersion({
+        appname,
         version,
-        appname
+        username,
+      } as Version)
+
+      return {
+        message: 'create success, ' + appname + ' ' + version,
+        version,
+        appname,
+      }
+    } catch (_error) {
+      throw new HttpException('BadRequest', HttpStatus.BAD_REQUEST)
+    }
+  }
+
+
+  @Put(':appname')
+  // async setVersion(@Body() body: Version, @Body('key') key: string) {
+  async updateVersion(@Param('appname') appname: string, @Body('version') version: string, @Body('key') key: string) {
+    try {
+      await this.publicKeyService.verifyKey(key)
+      await this.versionService.updateVersion({
+        version,
+        appname,
       } as Version)
 
       return {
         message: 'update success, current Version: ' + version,
-        version
+        version,
       }
     } catch (_error) {
       throw new HttpException('BadRequest', HttpStatus.BAD_REQUEST)
